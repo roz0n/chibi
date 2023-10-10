@@ -7,12 +7,28 @@
 
 import SwiftUI
 
-struct ChatNavigationToolbar: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ChatNavigationToolbar: ToolbarContent {
+  var body: some ToolbarContent {
+    ToolbarItem(placement: .navigationBarTrailing) {
+      Button {
+        print("Tapped")
+      } label: {
+        Image(systemName: "gearshape.fill")
+          .bold()
+      }
+      .tint(.accentColor)
+      .buttonStyle(.bordered)
     }
+  }
 }
 
 #Preview {
-    ChatNavigationToolbar()
+  NavigationStack {
+    VStack {
+      Text("View")
+    }
+    .toolbar {
+      ChatNavigationToolbar()
+    }
+  }
 }
