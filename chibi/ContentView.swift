@@ -8,24 +8,82 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  @ToolbarContentBuilder
+  func NavigationToolbar() -> some ToolbarContent {
+    ToolbarItem(placement: .navigationBarTrailing) {
+      Button {
+        print("Tapped")
+      } label: {
+        Image(systemName: "gearshape.fill")
+          .bold()
+      }
+      .tint(.accentColor)
+      .buttonStyle(.bordered)
+    }
+  }
+  
+  init() {
+    UIAppearanceConfiguration.configureNavigation()
+  }
+  
   var body: some View {
     NavigationStack {
       VStack(spacing: 0) {
-        HStack {
+        ScrollView {
           Text("A")
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          Text("A")
+            .bold()
+          
         }
-        .background(.blue)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(.gray.opacity(0.15))
         
         HStack {
           Text("B")
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300)
+            .bold()
         }
-        .background(.red)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300)
+        .background(.white)
       }
-      .background(.purple)
-      .navigationTitle("Room")
+      .navigationTitle("Chat Room A")
       .navigationBarTitleDisplayMode(.inline)
+      .toolbar {
+        NavigationToolbar()
+      }
     }
   }
 }

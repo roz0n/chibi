@@ -11,6 +11,7 @@
 		231617152AD4E9740038A32B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617142AD4E9740038A32B /* ContentView.swift */; };
 		231617172AD4E9750038A32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231617162AD4E9750038A32B /* Assets.xcassets */; };
 		2316171A2AD4E9750038A32B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231617192AD4E9750038A32B /* Preview Assets.xcassets */; };
+		231617212AD4FA050038A32B /* UIAppearanceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617202AD4FA050038A32B /* UIAppearanceConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		231617142AD4E9740038A32B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		231617162AD4E9750038A32B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231617192AD4E9750038A32B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		231617202AD4FA050038A32B /* UIAppearanceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAppearanceConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				231617122AD4E9740038A32B /* ChibiApp.swift */,
+				231617202AD4FA050038A32B /* UIAppearanceConfiguration.swift */,
 				231617142AD4E9740038A32B /* ContentView.swift */,
 				231617162AD4E9750038A32B /* Assets.xcassets */,
 				231617182AD4E9750038A32B /* Preview Content */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				231617152AD4E9740038A32B /* ContentView.swift in Sources */,
+				231617212AD4FA050038A32B /* UIAppearanceConfiguration.swift in Sources */,
 				231617132AD4E9740038A32B /* ChibiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
