@@ -11,14 +11,21 @@ import MultipeerConnectivity
 final class ChatPeersListViewModel: ObservableObject {
   
   @Published var manager: PeerConnectivityManager = PeerConnectivityManager()
-  @Published var state: ViewState = .empty
+//  @Published var state: ViewState = .loading
+//  
+//  enum ViewState {
+//    case loading
+//    case loaded
+//    case browsing
+//    case error
+//  }
   
   func start(displayName: String, channelName: String) {
-    manager.startHosting(id: MCPeerID(displayName: displayName), channel: channelName)
+    manager.startAdvertising(id: MCPeerID(displayName: displayName), channel: channelName)
   }
   
   func stop() {
-    manager.endHosting()
+    manager.stopAdvertising()
   }
   
 }

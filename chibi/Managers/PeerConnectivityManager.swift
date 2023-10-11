@@ -13,8 +13,9 @@ final class PeerConnectivityManager: NSObject, ObservableObject {
   @Published private(set) var id: MCPeerID!
   @Published private(set) var session: MCSession!
   @Published private(set) var advertiserAssistant: MCAdvertiserAssistant!
+  @Published private(set) var serviceBrowser: MCNearbyServiceBrowser!
   
-  func startHosting(id: MCPeerID, channel: String) {
+  func startAdvertising(id: MCPeerID, channel: String) {
     self.id = id
     self.session = MCSession(peer: id)
     self.advertiserAssistant = MCAdvertiserAssistant(serviceType: channel, discoveryInfo: nil, session: session)
@@ -26,9 +27,22 @@ final class PeerConnectivityManager: NSObject, ObservableObject {
     print("Started advertising to peers...")
   }
   
-  func endHosting() {
+  func stopAdvertising() {
     advertiserAssistant.stop()
     print("Stopped advertising to peers...")
+  }
+  
+  func startBrowsing() {
+    serviceBrowser = MCNearbyServiceBrowser(peer: id, serviceType: "chibi")
+    serviceBrowser.delegate = self
+    serviceBrowser.startBrowsingForPeers()
+    
+    print("Started browsing for peers...")
+  }
+  
+  func stopBrowsing() {
+    serviceBrowser.stopBrowsingForPeers()
+    print("Stopped browsing for peers...")
   }
   
 }
@@ -63,6 +77,33 @@ extension PeerConnectivityManager: MCSessionDelegate {
 
 extension PeerConnectivityManager: MCAdvertiserAssistantDelegate {
   
+  func advertiserAssistantWillPresentInvitation(_ advertiserAssistant: MCAdvertiserAssistant) {
+    print("Advertiser will present invite now...")
+  }
   
+  func advertiserAssistantDidDismissInvitation(_ advertiserAssistant: MCAdvertiserAssistant) {
+    print("Advertiser invite was rejected!")
+  }
+  
+}
+
+// MARK: - MCNearbyServiceBrowserDelegate
+
+extension PeerConnectivityManager: MCNearbyServiceBrowserDelegate {
+  
+  func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+    print("Found peer: \(peerID)")
+    // Implement your logic to invite or interact with the found peer
+  }
+  
+  func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+    print("Lost peer: \(peerID)")
+    // Implement your logic for when a peer is lost
+  }
+  
+  func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
+    print("Did not start browsing: \(error)")
+    // Handle the error appropriately
+  }
   
 }

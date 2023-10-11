@@ -1,5 +1,5 @@
 //
-//  ChatPeersList.swift
+//  ChatPeersListView.swift
 //  chibi
 //
 //  Created by Arnaldo Rozon on 10/10/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChatPeersList: View {
+struct ChatPeersListView: View {
   
   @State private var isAddPeersPresented: Bool = false
   
@@ -20,7 +20,7 @@ struct ChatPeersList: View {
     .navigationTitle("Peers")
     .navigationBarTitleDisplayMode(.large)
     .sheet(isPresented: $isAddPeersPresented, content: {
-      ChatAddPeersList()
+      ChatAddPeersListView()
     })
     .toolbar {
       ToolbarItem(placement: .navigationBarTrailing) {
@@ -37,6 +37,6 @@ struct ChatPeersList: View {
 
 #Preview {
   NavigationStack {
-    ChatPeersList()
+    ChatPeersListView()
   }
 }
