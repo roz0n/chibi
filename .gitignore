@@ -1,0 +1,79 @@
+# macOS-specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+xcuserdata/
+DerivedData/
+*.xcodeproj/project.xcworkspace/
+*.xcworkspace/xcuserdata
+*.xcworkspace/xcshareddata
+*.xccheckout
+*.moved-aside
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# SwiftLint
+.swiftlint.yml
+swiftlint.report
+
+# SwiftFormat
+.swiftformat
+
+# Code coverage
+*.xcresult
+coverage/
+*.coveragexml
+
+# User-specific
+*.swp
+*.swo
+
+# Generated files
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.swiftpm/
+
+# Git Hooks
+.hooks/
+
+# GitHub Actions
+.github/workflows/
+
+# Secrets and environment files
+.env
+*.pem
+*.cer
+*.p12
+
+# Editors
+# Visual Studio Code
+.vscode/
+# Sublime Text
+*.sublime-workspace
+# Vim
+*.vim
+# Emacs
+*~
+.\#*
+\#*\#
+
