@@ -13,28 +13,28 @@ struct ChatContentView: View {
   @State var isPeersPresented: Bool = false
   
   var body: some View {
-    NavigationStack {
-      VStack(spacing: 0) {
-        ChatMessagesListView()
-        ChatInputView()
-      }
-      .environmentObject(viewModel)
-      .navigationTitle("Room A")
-      .navigationBarTitleDisplayMode(.inline)
-      .toolbar {
-        ChatNavigationToolbar(isPeersPresented: $isPeersPresented)
-      }
-      .navigationDestination(isPresented: $isPeersPresented) {
-        ChatPeersListView()
-      }
-      .task {
-        viewModel.start(displayName: "arnaldo", channelName: "chibi")
-      }
+    VStack(spacing: 0) {
+      ChatMessagesListView()
+      ChatInputView()
+    }
+    .environmentObject(viewModel)
+    .navigationTitle("Room A")
+    .navigationBarTitleDisplayMode(.inline)
+    .toolbar {
+      ChatNavigationToolbar(isPeersPresented: $isPeersPresented)
+    }
+    .navigationDestination(isPresented: $isPeersPresented) {
+      ChatPeersListView()
+    }
+    .task {
+      viewModel.start(displayName: "arnaldo", channelName: "chibi")
     }
   }
   
 }
 
 #Preview {
-  ChatContentView()
+  NavigationStack {
+    ChatContentView()
+  }
 }

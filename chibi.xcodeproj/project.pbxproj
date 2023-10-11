@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2311E9182AD686EF0006F60D /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2311E9172AD686EF0006F60D /* ChatContentView.swift */; };
+		2311E91C2AD68D3F0006F60D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2311E91B2AD68D3F0006F60D /* HomeView.swift */; };
 		231617132AD4E9740038A32B /* Chibi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617122AD4E9740038A32B /* Chibi.swift */; };
 		231617152AD4E9740038A32B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617142AD4E9740038A32B /* ContentView.swift */; };
 		231617172AD4E9750038A32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231617162AD4E9750038A32B /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		2311E9162AD67C8A0006F60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2311E9172AD686EF0006F60D /* ChatContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		2311E91B2AD68D3F0006F60D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2316170F2AD4E9740038A32B /* chibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		231617122AD4E9740038A32B /* Chibi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chibi.swift; sourceTree = "<group>"; };
 		231617142AD4E9740038A32B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2311E91A2AD68D370006F60D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2311E91B2AD68D3F0006F60D /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		231617062AD4E9740038A32B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				2316172C2AD63B510038A32B /* Extensions */,
 				231617292AD63AD10038A32B /* Managers */,
 				231617222AD604040038A32B /* Chat */,
+				2311E91A2AD68D370006F60D /* Home */,
 				2316172D2AD63BF10038A32B /* App */,
 				2311E9162AD67C8A0006F60D /* Info.plist */,
 				231617162AD4E9750038A32B /* Assets.xcassets */,
@@ -231,6 +242,7 @@
 				231617282AD6046A0038A32B /* ChatNavigationToolbar.swift in Sources */,
 				231617212AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift in Sources */,
 				231617132AD4E9740038A32B /* Chibi.swift in Sources */,
+				2311E91C2AD68D3F0006F60D /* HomeView.swift in Sources */,
 				231617362AD66B560038A32B /* ChatPeersListViewModel.swift in Sources */,
 				231617332AD66A490038A32B /* ChatAddPeersListView.swift in Sources */,
 			);

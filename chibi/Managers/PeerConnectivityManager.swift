@@ -15,6 +15,8 @@ final class PeerConnectivityManager: NSObject, ObservableObject {
   @Published private(set) var advertiserAssistant: MCAdvertiserAssistant!
   @Published private(set) var serviceBrowser: MCNearbyServiceBrowser!
   
+  // MARK: - Advertise Service
+  
   func startAdvertising(id: MCPeerID, channel: String) {
     self.id = id
     self.session = MCSession(peer: id)
@@ -31,6 +33,8 @@ final class PeerConnectivityManager: NSObject, ObservableObject {
     advertiserAssistant.stop()
     print("Stopped advertising to peers...")
   }
+  
+  // MARK: - Browse for Peers
   
   func startBrowsing() {
     serviceBrowser = MCNearbyServiceBrowser(peer: id, serviceType: "chibi")
