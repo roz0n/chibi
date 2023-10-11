@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct ChatNavigationToolbar: ToolbarContent {
+  
+  @Binding var isPeersPresented: Bool
+  
   var body: some ToolbarContent {
     ToolbarItem(placement: .navigationBarTrailing) {
       Button {
-        print("Tapped")
+        isPeersPresented.toggle()
       } label: {
-        Image(systemName: "gearshape.fill")
-          .bold()
+        Image(systemName: "person.2.fill")
+          .font(.system(size: 16))
       }
       .tint(.accentColor)
-      .buttonStyle(.bordered)
+      .buttonStyle(.borderless)
     }
   }
+  
 }
 
 #Preview {
@@ -28,7 +32,7 @@ struct ChatNavigationToolbar: ToolbarContent {
       Text("View")
     }
     .toolbar {
-      ChatNavigationToolbar()
+      ChatNavigationToolbar(isPeersPresented: .constant(false))
     }
   }
 }

@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
   
+  @State var isPeersPresented: Bool = false
+  
   init() {
-    UIAppearanceConfiguration.configureNavigation()
+    UINavigationBarAppearance.enableRoundedFontDesign()
   }
   
   var body: some View {
@@ -22,10 +24,14 @@ struct ContentView: View {
       .navigationTitle("Room A")
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
-        ChatNavigationToolbar()
+        ChatNavigationToolbar(isPeersPresented: $isPeersPresented)
       }
+      .navigationDestination(isPresented: $isPeersPresented, destination: {
+        ChatPeersList()
+      })
     }
   }
+  
 }
 
 #Preview {

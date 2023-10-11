@@ -34,9 +34,9 @@ struct ChatInputView: View {
           Spacer()
           
           Button {
-            print("Tapped trasg")
+            print("Tapped trash")
           } label: {
-            Image(systemName: "trash.fill")
+            Image(systemName: "arrow.up.circle.fill")
           }
         }
         .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -52,13 +52,20 @@ struct ChatInputView: View {
       // MARK: - Secondary Toolbar
       HStack(spacing: 16) {
         Button {
-          print("Tapped pen")
+          print("Tapped draw")
         } label: {
-          Image(systemName: "hand.draw.fill")
+          Image(systemName: "trash.fill")
         }
         .font(.system(size: 20, weight: .bold, design: .rounded))
         
         Spacer()
+        
+        Button {
+          print("Tapped type")
+        } label: {
+          Image(systemName: "hand.draw.fill")
+        }
+        .font(.system(size: 20, weight: .bold, design: .rounded))
       }
     }
     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300)

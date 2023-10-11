@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		231617132AD4E9740038A32B /* ChibiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617122AD4E9740038A32B /* ChibiApp.swift */; };
+		231617132AD4E9740038A32B /* Chibi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617122AD4E9740038A32B /* Chibi.swift */; };
 		231617152AD4E9740038A32B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617142AD4E9740038A32B /* ContentView.swift */; };
 		231617172AD4E9750038A32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231617162AD4E9750038A32B /* Assets.xcassets */; };
 		2316171A2AD4E9750038A32B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231617192AD4E9750038A32B /* Preview Assets.xcassets */; };
-		231617212AD4FA050038A32B /* UIAppearanceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617202AD4FA050038A32B /* UIAppearanceConfiguration.swift */; };
+		231617212AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617202AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift */; };
 		231617242AD604130038A32B /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617232AD604130038A32B /* ChatInputView.swift */; };
 		231617262AD604340038A32B /* ChatMessagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617252AD604340038A32B /* ChatMessagesListView.swift */; };
 		231617282AD6046A0038A32B /* ChatNavigationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617272AD6046A0038A32B /* ChatNavigationToolbar.swift */; };
+		2316172B2AD63AEE0038A32B /* PeerConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316172A2AD63AEE0038A32B /* PeerConnectivityManager.swift */; };
+		2316172F2AD63CBE0038A32B /* ChatPeersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316172E2AD63CBE0038A32B /* ChatPeersList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2316170F2AD4E9740038A32B /* chibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		231617122AD4E9740038A32B /* ChibiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChibiApp.swift; sourceTree = "<group>"; };
+		231617122AD4E9740038A32B /* Chibi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chibi.swift; sourceTree = "<group>"; };
 		231617142AD4E9740038A32B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		231617162AD4E9750038A32B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		231617192AD4E9750038A32B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		231617202AD4FA050038A32B /* UIAppearanceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAppearanceConfiguration.swift; sourceTree = "<group>"; };
+		231617202AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarAppearanceExtension.swift; sourceTree = "<group>"; };
 		231617232AD604130038A32B /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
 		231617252AD604340038A32B /* ChatMessagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesListView.swift; sourceTree = "<group>"; };
 		231617272AD6046A0038A32B /* ChatNavigationToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationToolbar.swift; sourceTree = "<group>"; };
+		2316172A2AD63AEE0038A32B /* PeerConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerConnectivityManager.swift; sourceTree = "<group>"; };
+		2316172E2AD63CBE0038A32B /* ChatPeersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPeersList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,10 @@
 		231617112AD4E9740038A32B /* chibi */ = {
 			isa = PBXGroup;
 			children = (
+				2316172C2AD63B510038A32B /* Extensions */,
+				231617292AD63AD10038A32B /* Managers */,
 				231617222AD604040038A32B /* Chat */,
-				231617122AD4E9740038A32B /* ChibiApp.swift */,
-				231617202AD4FA050038A32B /* UIAppearanceConfiguration.swift */,
-				231617142AD4E9740038A32B /* ContentView.swift */,
+				2316172D2AD63BF10038A32B /* App */,
 				231617162AD4E9750038A32B /* Assets.xcassets */,
 				231617182AD4E9750038A32B /* Preview Content */,
 			);
@@ -83,8 +87,34 @@
 				231617232AD604130038A32B /* ChatInputView.swift */,
 				231617252AD604340038A32B /* ChatMessagesListView.swift */,
 				231617272AD6046A0038A32B /* ChatNavigationToolbar.swift */,
+				2316172E2AD63CBE0038A32B /* ChatPeersList.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		231617292AD63AD10038A32B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2316172A2AD63AEE0038A32B /* PeerConnectivityManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2316172C2AD63B510038A32B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				231617202AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2316172D2AD63BF10038A32B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				231617122AD4E9740038A32B /* Chibi.swift */,
+				231617142AD4E9740038A32B /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +189,12 @@
 			files = (
 				231617152AD4E9740038A32B /* ContentView.swift in Sources */,
 				231617262AD604340038A32B /* ChatMessagesListView.swift in Sources */,
+				2316172B2AD63AEE0038A32B /* PeerConnectivityManager.swift in Sources */,
 				231617242AD604130038A32B /* ChatInputView.swift in Sources */,
+				2316172F2AD63CBE0038A32B /* ChatPeersList.swift in Sources */,
 				231617282AD6046A0038A32B /* ChatNavigationToolbar.swift in Sources */,
-				231617212AD4FA050038A32B /* UIAppearanceConfiguration.swift in Sources */,
-				231617132AD4E9740038A32B /* ChibiApp.swift in Sources */,
+				231617212AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift in Sources */,
+				231617132AD4E9740038A32B /* Chibi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +331,13 @@
 				DEVELOPMENT_TEAM = RYK6GDE7V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,11 +362,13 @@
 				DEVELOPMENT_TEAM = RYK6GDE7V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

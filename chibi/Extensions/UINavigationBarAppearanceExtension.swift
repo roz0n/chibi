@@ -1,5 +1,5 @@
 //
-//  UIAppearanceConfiguration.swift
+//  UINavigationBarAppearanceExtension.swift
 //  chibi
 //
 //  Created by Arnaldo Rozon on 10/9/23.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-struct UIAppearanceConfiguration {
+extension UINavigationBarAppearance {
   
-  static func configureNavigation() {
+  static func enableRoundedFontDesign() {
     let largeTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
     let titleFont = UIFont.preferredFont(forTextStyle: .headline)
     

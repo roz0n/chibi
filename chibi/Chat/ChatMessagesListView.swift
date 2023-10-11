@@ -16,14 +16,14 @@ struct ChatMessagesListView: View {
         }
       }
       .listStyle(.inset)
+      .frame(minWidth: 0, maxWidth: .infinity)
+      .background(.gray.opacity(0.15))
+      .padding(.bottom, 16)
       .onAppear {
-        withAnimation(.spring(.smooth)) {
+        withAnimation(.spring()) {
           proxy.scrollTo(200, anchor: .bottom)
         }
       }
-      .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-      .background(.gray.opacity(0.15))
-      .padding(.bottom, 16)
     }
   }
 }
