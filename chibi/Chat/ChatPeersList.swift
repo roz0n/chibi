@@ -9,14 +9,30 @@ import SwiftUI
 
 struct ChatPeersList: View {
   
+  @StateObject var viewModel: ChatPeersListViewModel = ChatPeersListViewModel()
+  @State private var isAddPeersPresented: Bool = false
+  
   var body: some View {
     List {
-      ForEach(0...6, id: \.self) { num in
-        Text("\(num)")
-      }
+      //      ForEach(0...6, id: \.self) { num in
+      //        Text("\(num)")
+      //      }
     }
     .navigationTitle("Peers")
     .navigationBarTitleDisplayMode(.large)
+    .sheet(isPresented: $isAddPeersPresented, content: {
+      ChatAddPeersList()
+        .environmentObject(viewModel)
+    })
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button {
+          isAddPeersPresented.toggle()
+        } label: {
+          Image(systemName: "plus")
+        }
+      }
+    }
   }
   
 }

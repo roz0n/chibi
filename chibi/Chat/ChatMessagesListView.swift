@@ -11,9 +11,9 @@ struct ChatMessagesListView: View {
   var body: some View {
     ScrollViewReader { proxy in
       List {
-        ForEach(0...200, id: \.self) {
-          Text("\($0)")
-        }
+//        ForEach(0...200, id: \.self) {
+//          Text("\($0)")
+//        }
       }
       .listStyle(.inset)
       .frame(minWidth: 0, maxWidth: .infinity)

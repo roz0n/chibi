@@ -17,6 +17,9 @@
 		231617282AD6046A0038A32B /* ChatNavigationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617272AD6046A0038A32B /* ChatNavigationToolbar.swift */; };
 		2316172B2AD63AEE0038A32B /* PeerConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316172A2AD63AEE0038A32B /* PeerConnectivityManager.swift */; };
 		2316172F2AD63CBE0038A32B /* ChatPeersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316172E2AD63CBE0038A32B /* ChatPeersList.swift */; };
+		231617332AD66A490038A32B /* ChatAddPeersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617322AD66A490038A32B /* ChatAddPeersList.swift */; };
+		231617362AD66B560038A32B /* ChatPeersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617352AD66B560038A32B /* ChatPeersListViewModel.swift */; };
+		231617412AD66CF10038A32B /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231617402AD66CF10038A32B /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		231617272AD6046A0038A32B /* ChatNavigationToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationToolbar.swift; sourceTree = "<group>"; };
 		2316172A2AD63AEE0038A32B /* PeerConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerConnectivityManager.swift; sourceTree = "<group>"; };
 		2316172E2AD63CBE0038A32B /* ChatPeersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPeersList.swift; sourceTree = "<group>"; };
+		231617322AD66A490038A32B /* ChatAddPeersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAddPeersList.swift; sourceTree = "<group>"; };
+		231617352AD66B560038A32B /* ChatPeersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPeersListViewModel.swift; sourceTree = "<group>"; };
+		231617402AD66CF10038A32B /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		231617112AD4E9740038A32B /* chibi */ = {
 			isa = PBXGroup;
 			children = (
+				2316173F2AD66CA80038A32B /* Common */,
 				2316172C2AD63B510038A32B /* Extensions */,
 				231617292AD63AD10038A32B /* Managers */,
 				231617222AD604040038A32B /* Chat */,
@@ -84,10 +91,12 @@
 		231617222AD604040038A32B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				231617342AD66B4E0038A32B /* View Models */,
 				231617232AD604130038A32B /* ChatInputView.swift */,
 				231617252AD604340038A32B /* ChatMessagesListView.swift */,
 				231617272AD6046A0038A32B /* ChatNavigationToolbar.swift */,
 				2316172E2AD63CBE0038A32B /* ChatPeersList.swift */,
+				231617322AD66A490038A32B /* ChatAddPeersList.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -103,7 +112,7 @@
 		2316172C2AD63B510038A32B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				231617202AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift */,
+				2316173D2AD66BF90038A32B /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +124,30 @@
 				231617142AD4E9740038A32B /* ContentView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		231617342AD66B4E0038A32B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				231617352AD66B560038A32B /* ChatPeersListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		2316173D2AD66BF90038A32B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				231617202AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2316173F2AD66CA80038A32B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				231617402AD66CF10038A32B /* ViewState.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +228,9 @@
 				231617282AD6046A0038A32B /* ChatNavigationToolbar.swift in Sources */,
 				231617212AD4FA050038A32B /* UINavigationBarAppearanceExtension.swift in Sources */,
 				231617132AD4E9740038A32B /* Chibi.swift in Sources */,
+				231617362AD66B560038A32B /* ChatPeersListViewModel.swift in Sources */,
+				231617332AD66A490038A32B /* ChatAddPeersList.swift in Sources */,
+				231617412AD66CF10038A32B /* ViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +367,7 @@
 				DEVELOPMENT_TEAM = RYK6GDE7V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To find nearby peers to chat with";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,12 +378,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.notenoughscience.chibi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,7 +401,7 @@
 				DEVELOPMENT_TEAM = RYK6GDE7V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To find nearby peers to chat with";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -373,12 +412,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.notenoughscience.chibi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
