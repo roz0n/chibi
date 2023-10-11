@@ -10,30 +10,24 @@ import MultipeerConnectivity
 
 final class PeerConnectivityManager: NSObject, ObservableObject {
   
-  @Published private(set) var id: MCPeerID?
-  @Published private(set) var session: MCSession?
-  @Published private(set) var advertiserAssistant: MCAdvertiserAssistant?
+  @Published private(set) var id: MCPeerID!
+  @Published private(set) var session: MCSession!
+  @Published private(set) var advertiserAssistant: MCAdvertiserAssistant!
   
   func startHosting(id: MCPeerID, channel: String) {
     self.id = id
     self.session = MCSession(peer: id)
-    
-    guard let session else {
-      fatalError("Failed to initialize MCSession")
-    }
-    
-    session.delegate = self
-    
     self.advertiserAssistant = MCAdvertiserAssistant(serviceType: channel, discoveryInfo: nil, session: session)
-    self.advertiserAssistant?.delegate = self
-    self.advertiserAssistant?.start()
+    
+    self.session.delegate = self
+    self.advertiserAssistant.delegate = self
+    self.advertiserAssistant.start()
     
     print("Started advertising to peers...")
   }
   
   func endHosting() {
-    advertiserAssistant?.stop()
-    
+    advertiserAssistant.stop()
     print("Stopped advertising to peers...")
   }
   

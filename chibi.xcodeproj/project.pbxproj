@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2311E9162AD67C8A0006F60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2316170F2AD4E9740038A32B /* chibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		231617122AD4E9740038A32B /* Chibi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chibi.swift; sourceTree = "<group>"; };
 		231617142AD4E9740038A32B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		231617112AD4E9740038A32B /* chibi */ = {
 			isa = PBXGroup;
 			children = (
+				2311E9162AD67C8A0006F60D /* Info.plist */,
 				2316173F2AD66CA80038A32B /* Common */,
 				2316172C2AD63B510038A32B /* Extensions */,
 				231617292AD63AD10038A32B /* Managers */,
@@ -367,6 +369,7 @@
 				DEVELOPMENT_TEAM = RYK6GDE7V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chibi/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To find nearby peers to chat with";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -401,6 +404,7 @@
 				DEVELOPMENT_TEAM = RYK6GDE7V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chibi/Info.plist;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To find nearby peers to chat with";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

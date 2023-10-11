@@ -20,7 +20,7 @@ struct ChatAddPeersList: View {
       .navigationBarTitleDisplayMode(.inline)
     }
     .task {
-      viewModel.start(displayName: "Arnaldo", channelName: "chibi-room-a")
+      viewModel.start(displayName: "arnaldo", channelName: "chibi")
     }
   }
   
