@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   
+  @StateObject var viewModel: ChatPeersListViewModel = ChatPeersListViewModel()
   @State var isPeersPresented: Bool = false
   
   init() {
@@ -28,6 +29,7 @@ struct ContentView: View {
       }
       .navigationDestination(isPresented: $isPeersPresented, destination: {
         ChatPeersList()
+          .environmentObject(viewModel)
       })
     }
   }

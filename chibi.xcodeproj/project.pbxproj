@@ -70,12 +70,12 @@
 		231617112AD4E9740038A32B /* chibi */ = {
 			isa = PBXGroup;
 			children = (
-				2311E9162AD67C8A0006F60D /* Info.plist */,
 				2316173F2AD66CA80038A32B /* Common */,
 				2316172C2AD63B510038A32B /* Extensions */,
 				231617292AD63AD10038A32B /* Managers */,
 				231617222AD604040038A32B /* Chat */,
 				2316172D2AD63BF10038A32B /* App */,
+				2311E9162AD67C8A0006F60D /* Info.plist */,
 				231617162AD4E9750038A32B /* Assets.xcassets */,
 				231617182AD4E9750038A32B /* Preview Content */,
 			);

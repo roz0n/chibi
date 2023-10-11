@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChatPeersList: View {
   
-  @StateObject var viewModel: ChatPeersListViewModel = ChatPeersListViewModel()
   @State private var isAddPeersPresented: Bool = false
   
   var body: some View {
@@ -22,7 +21,6 @@ struct ChatPeersList: View {
     .navigationBarTitleDisplayMode(.large)
     .sheet(isPresented: $isAddPeersPresented, content: {
       ChatAddPeersList()
-        .environmentObject(viewModel)
     })
     .toolbar {
       ToolbarItem(placement: .navigationBarTrailing) {
